@@ -37,7 +37,7 @@ app.get('/', (req, res, next) => {
                     });
                 }
 
-                Medico.count({}, (err, conteo) => {
+                Medico.collection.count({}, (err, conteo) => {
                     res.status(200).json({
                         ok: true,
                         medico: medico,
